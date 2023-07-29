@@ -3,6 +3,7 @@ import { Outlet, Link} from "react-router-dom";
 const Navbar = () => {
   return (
     <>
+<<<<<<< HEAD
 
       <div className="navbar">
       <Link className="logo-pic" to="App.jsx"><img src=".travel logo.jpg" alt=""/></Link>
@@ -18,6 +19,9 @@ const Navbar = () => {
             <Link to="">Sign Up</Link>
         </div>
       </div>
+=======
+      <div> </div>
+>>>>>>> 1b0a67553e32f76e3641022b95d7c01b268fc406
       <Outlet />
     </>
   );
