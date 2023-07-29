@@ -21,7 +21,7 @@ const LocationSearch = () => {
                 >
                     <option>Select where to start</option>
                     <option value="Chandigarh">Chandigarh</option>
-                    <option value="Jodhpu">Jodhpur</option>
+                    <option value="Jodhpur">Jodhpur</option>
                 </select>
             </div>
             <div className="row">
@@ -36,7 +36,7 @@ const LocationSearch = () => {
                 >
                     <option>Select where to go</option>
                     <option value="Chandigarh">Chandigarh</option>
-                    <option value="Jodhpu">Jodhpur</option>
+                    <option value="Jodhpur">Jodhpur</option>
                 </select>
             </div>
             <button>Search</button>
