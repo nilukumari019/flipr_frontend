@@ -49,13 +49,11 @@ const Login = () => {
           onChange={handleChange}
           required
         />
-        <div className="psw">
-          <div className="check">
-            <input type="checkbox" />
-            <label>Remember me</label>
-          </div>
-          <Link to="#">Forget Password</Link>
-        </div>
+        
+         <div className="check">
+            <input type="check-box" />
+         </div>
+        
 
         <div className="box">
           <button type="submit">Login</button>
