@@ -13,13 +13,26 @@ const Hotel = ({ onSearch }) => {
   };
 
   return (
-    <div className="container">
-      <input
+    <div className="Hotel">
+        <label htmlFor="Hotels">Hotel:</label>
+        <select>
+            <option>Select your choice of Hotel</option>
+            <option value="Reddison">Reddison</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Gopalganj">Gopalganj</option>
+            <option value="Jodhpur">Jodhpur</option>
+            <option value="Sikar">Sikar</option>
+            <option value="Bikaner">Bikaner</option>
+            <option value="Hamirpur">Hamirpur</option>
+            <option value="Amritsar">Amritsar</option>
+            <option value="Palampur">Palampur</option>
+        </select>
+      {/* <input
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
-        placeholder="Enter your search term"
-      />
+        placeholder="Enter the name of Hotel"
+      /> */}
       <button onClick={handleSearch}>Search</button>
     </div>
   );

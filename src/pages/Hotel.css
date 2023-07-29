@@ -1,12 +1,20 @@
 /* Example CSS to reduce the width of the search bar */
-.container {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  
-  input[type="text"] {
+.Hotel {
+    /* padding-top: 30vh; */
+    /* margin-top: 30vh; */
+    max-width: 90vw;
+    box-shadow: 0px 0px 4px #aaa;
+    margin:10vh auto;
+    background: linear-gradient(#fff, #ddd);
+    padding: 30px;
+}
+label{
+    padding-bottom: 10px;
+}
+select {
+    margin-bottom: 10px;
     width: 100%;
-    padding: 8px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
