@@ -1,0 +1,30 @@
+.home {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .left {
+    width: fit-content;
+    font-family: 'Satisfy';    
+    font-size: 30px;
+    margin-left: 200px;
+    text-align: center;
+}
+
+.home .another{
+    font-family: 'Satisfy';
+    padding: 15px;
+    font-size: 17px;
+    color: gray;
+    padding-bottom: 30px;
+}
+
+.home button{
+    background-color: rgba(11, 134, 155, 0.622);
+    color: black;
+    font-size: 20px;
+    font-family: 'Satisfy';
+    padding: 15px;
+}

@@ -6,39 +6,5 @@
     margin: 0;
     box-sizing: border-box;
 }
-.navbar{
-    /* background-color: rgb(251, 255, 0); */
-    display: flex;
-    justify-content: space-between;
-    /* height: 1rem; */
-}
-
-.navbar .travel h3{
-    
-    font-family: 'Satisfy';
-}
-
-.menu {
-    display: flex;
-    gap: 10px;
-}
-
-.menu a{
-    color: black;
-    flex-wrap: wrap;
-    font-family: sans-serif;
-    padding: 20px;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
-.travel h3{
-    font-size: 35px;
-    margin-left: 15px;
-}
 
 
-  .navbar .menu a:hover {
-    color: blue; 
-    text-decoration: underline; 
-  }

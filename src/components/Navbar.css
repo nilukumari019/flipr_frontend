@@ -1,0 +1,41 @@
+.navbar{
+    background-color: rgb(241, 244, 79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 1rem; */
+    padding:10px 30px;
+}
+
+.navbar .travel h3{
+    
+    font-family: 'Satisfy';
+
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a{
+    color: black;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    /* padding: 20px; */
+    margin-right: 10px;
+    /* margin-top: 25px; */
+    text-decoration: none;
+}
+
+.travel h3{
+    font-size: 35px;
+    /* margin-left: 50px; */
+    /* margin-top: 25px; */
+}
+
+
+  .navbar .menu a:hover {
+    color: blue; 
+    text-decoration: underline; 
+  }
