@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Hotel.css'; // Import the CSS file containing the styles
+import Card from '../components/Card';
 
 const Hotel = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,6 +14,7 @@ const Hotel = ({ onSearch }) => {
   };
 
   return (
+    <>
     <div className="Hotel">
         <label htmlFor="Hotels">Hotel:</label>
         <select>
@@ -27,14 +29,19 @@ const Hotel = ({ onSearch }) => {
             <option value="Amritsar">Amritsar</option>
             <option value="Palampur">Palampur</option>
         </select>
-      {/* <input
-        type="text"
-        value={searchTerm}
-        onChange={handleInputChange}
-        placeholder="Enter the name of Hotel"
-      /> */}
-      <button onClick={handleSearch}>Search</button>
+        <button onClick={handleSearch}>Search</button>
     </div>
+    <div className='card-wrapper'>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+    </div>
+    </>
   );
 };
 

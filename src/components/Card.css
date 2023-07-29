@@ -1,0 +1,19 @@
+.Card {
+    background: linear-gradient(#fff, #ddd);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.Extra{
+    margin-top: 2vh;
+}
+.Info{
+    margin-top: 2vh;
+}
+button{
+    margin-top: 1vh;
+}
+.Card img{
+    border-radius: 10px;
+}

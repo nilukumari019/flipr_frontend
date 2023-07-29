@@ -32,3 +32,18 @@ select {
     background-color: #0056b3;
   }
   
+
+.card-wrapper{
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Extra{
+  font-family: '';
+  font-weight: lighter;
+  color: #565656;
+}
