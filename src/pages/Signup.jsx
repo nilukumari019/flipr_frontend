@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Signup.scss";
 import { signup } from "../components/http_request";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -11,6 +13,8 @@ const Signup = () => {
     });
 
     const [show, setShow] = useState(false);
+    const dispatch = useDispatch();
+    const redirect = useNavigate();
 
     return (
         <div className="signup-container">
@@ -73,7 +77,10 @@ const Signup = () => {
                     <span>Show Password</span>
                 </div>
 
-                <button onClick={signup} type="submit">
+                <button
+                    onClick={signup.bind(null, redirect, dispatch)}
+                    type="submit"
+                >
                     Sign Up
                 </button>
             </form>

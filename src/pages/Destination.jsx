@@ -1,49 +1,47 @@
-import React, { useState } from 'react';
-import './Destination.css'; // Import the CSS file containing the styles
+import React, { useState } from "react";
+import "./Destination.scss";  
 
 const LocationSearch = () => {
-  const [fromLocation, setFromLocation] = useState('');
-  const [toLocation, setToLocation] = useState('');
+    const [form, setForm] = useState({
+        from: "Select where to start",
+        to: "Select where to go",
+    });
 
-  const handleFromChange = (event) => {
-    setFromLocation(event.target.value);
-  };
-
-  const handleToChange = (event) => {
-    setToLocation(event.target.value);
-  };
-
-  const handleSearch = () => {
-    // Perform your search or navigation logic here based on 'fromLocation' and 'toLocation'
-    // For example, you could use a navigation library like react-router-dom to navigate to a new page or display search results.
-    // Or, you could make an API call to get directions or other location-related data.
-  };
-
-  return (
-    <div className="container">
-      <div className="row">
-        <label htmlFor="from">From:</label>
-        <input
-          type="text"
-          id="from"
-          value={fromLocation}
-          onChange={handleFromChange}
-          placeholder="Enter starting location"
-        />
-      </div>
-      <div className="row">
-        <label htmlFor="to">To:</label>
-        <input
-          type="text"
-          id="to"
-          value={toLocation}
-          onChange={handleToChange}
-          placeholder="Enter destination location"
-        />
-      </div>
-      <button onClick={handleSearch}>Search</button>
-    </div>
-  );
+    return (
+        <div className="destination">
+            <div className="row">
+                <label htmlFor="from">From:</label>
+                <select
+                    value={form.from}
+                    onChange={(e) =>
+                        setForm((t) => {
+                            return { ...t, from: e.target.value };
+                        })
+                    }
+                >
+                    <option>Select where to start</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Jodhpu">Jodhpur</option>
+                </select>
+            </div>
+            <div className="row">
+                <label htmlFor="to">To:</label>
+                <select
+                    value={form.to}
+                    onChange={(e) =>
+                        setForm((t) => {
+                            return { ...t, to: e.target.value };
+                        })
+                    }
+                >
+                    <option>Select where to go</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Jodhpu">Jodhpur</option>
+                </select>
+            </div>
+            <button>Search</button>
+        </div>
+    );
 };
 
 export default LocationSearch;
