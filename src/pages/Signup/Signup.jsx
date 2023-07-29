@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Signup.scss";
-import { signup } from "../components/http_request";
+import { signup } from "../../components/http_request";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -8,6 +8,7 @@ const Signup = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        phoneNumber: 0,
         password: "",
         confirmPassword: "",
     });
@@ -27,6 +28,19 @@ const Signup = () => {
                     onInput={(e) =>
                         setFormData((t) => {
                             return { ...t, name: e.target.value };
+                        })
+                    }
+                    required
+                />
+                <label htmlFor="phoneNumber">Phone Number:</label>
+                <input
+                    type="number"
+                    min={1000000000}
+                    max={9999999999}
+                    value={formData.phoneNumber}
+                    onInput={(e) =>
+                        setFormData((t) => {
+                            return { ...t, phoneNumber: e.target.value };
                         })
                     }
                     required
@@ -78,7 +92,7 @@ const Signup = () => {
                 </div>
 
                 <button
-                    onClick={signup.bind(null, redirect, dispatch)}
+                    onClick={signup.bind(null, formData, redirect, dispatch)}
                     type="submit"
                 >
                     Sign Up
