@@ -5,7 +5,6 @@ const Navbar = () => {
     <>
 
       <div className="navbar">
-      <Link className="logo-pic" to="App.jsx"><img src=".travel logo.jpg" alt=""/></Link>
         <div className="travel">
             <h3>Travel Planner Pro</h3>
         </div>
@@ -14,11 +13,10 @@ const Navbar = () => {
             <Link to="">Hotels</Link>
             <Link to="">Flights</Link>
             <Link to="">Bookings</Link>
-            <Link to="">Login</Link>
-            <Link to="">Sign Up</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/signup">Sign Up</Link>
         </div>
       </div>
-      <div> </div>
       <Outlet />
     </>
   );
