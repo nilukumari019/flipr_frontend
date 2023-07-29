@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/home";
 import Destination from "./pages/Destination";
+import Hotel from "./pages/Hotel";
 
 const router = createBrowserRouter([
     {
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
         children: [
             { index: true, element: <Home/>  },
             {path: "/destination", element: <Destination/>},
+            {path: '/hotel', element: <Hotel/>},
             {
                 path: "/login",
                 element: <Login />,

@@ -1,21 +1,12 @@
-/* Example CSS to reduce the width of the rows */
+/* Example CSS to reduce the width of the search bar */
 .container {
     max-width: 300px;
     margin: 0 auto;
   }
   
-  .row {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-  }
-  
   input[type="text"] {
     width: 100%;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
