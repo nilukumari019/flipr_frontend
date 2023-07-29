@@ -1,7 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Satisfy&display=swap');
 *,
 *::before,
 *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Satisfy';
 }
+.navbar{
+    /* background-color: rgb(251, 255, 0); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a{
+    color: black;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    padding: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.travel h3{
+    font-size: 35px;
+    margin-left: 15px;
+}
+
+
+  .navbar .menu a:hover {
+    color: blue; 
+    text-decoration: underline; 
+  }
+  .Home{
+    background-image: url("file:///C:/Users/Anil%20Mehta/Desktop/Flipr/flipr_frontend/girl.svg");
+  }
