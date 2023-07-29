@@ -1,68 +1,66 @@
 import React, { useState } from "react";
-import "./login.css";
-import { Link } from "react-router-dom";
+import "./login.scss";
+import { login } from "../components/http_request";
+
 const Login = () => {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  });
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+    });
+    const [show, setShow] = useState(false);
 
-  const [errorMessage, setErrorMessage] = useState("");
+    return (
+        <div className="login-container">
+            <h1>Login</h1>
+            <form onSubmit={(e) => e.preventDefault()}>
+                <label htmlFor="email">Email:</label>
+                <input
+                    type="text"
+                    id="email"
+                    value={formData.email}
+                    onInput={(e) =>
+                        setFormData((t) => {
+                            return { ...t, email: e.target.value };
+                        })
+                    }
+                    required
+                />
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-  };
+                <label htmlFor="password">Password:</label>
+                <input
+                    type={show ? "text" : "password"}
+                    value={formData.password}
+                    onInput={(e) =>
+                        setFormData((t) => {
+                            return { ...t, password: e.target.value };
+                        })
+                    }
+                    required
+                />
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+                <div className="check">
+                    <input
+                        type="checkbox"
+                        checked={show}
+                        onChange={() => setShow((t) => !t)}
+                    />
+                    <span> Show Password</span>
+                </div>
 
-    // Replace this part with your server-side authentication logic
-    const { username, password } = formData;
-    if (username === "admin" && password === "password") {
-      setErrorMessage("Login successful!");
-    } else {
-      setErrorMessage("Invalid username or password.");
-    }
-  };
-
-  return (
-    <div className="login-container">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-          required
-        />
-
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-        
-         <div className="check">
-            <input type="check-box" />
-         </div>
-        
-
-        <div className="box">
-          <button type="submit">Login</button>
-          <button type="reset">Cancel</button>
+                <div className="box">
+                    <button type="submit" onClick={login}>
+                        Login
+                    </button>
+                    <button
+                        type="reset"
+                        onClick={() => setFormData({ email: "", password: "" })}
+                    >
+                        reset
+                    </button>
+                </div>
+            </form>
         </div>
-      </form>
-      {errorMessage && <p id="error-message">{errorMessage}</p>}
-    </div>
-  );
+    );
 };
 
 export default Login;
