@@ -1,9 +1,28 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Navbar />,
+        children: [
+            { index: true },
+            {
+                path: "/login",
+                element: <Login />,
+            },
+            {
+                path: "/signup",
+                element: <Signup />,
+            },
+        ],
+    },
+]);
+
 function App() {
-    return (
-        <div>
-            <h1>App</h1>
-        </div>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
