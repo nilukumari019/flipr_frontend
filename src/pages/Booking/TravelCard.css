@@ -1,0 +1,73 @@
+/* Aeroplane container */
+.aeroplane-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    width: 90vw;
+    border-radius: 10px;
+    background-color: #00000018;
+    
+}
+
+/* Aeroplane image */
+
+
+/* Aeroplane info */
+.aeroplane-info {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.aeroplane-name {
+    font-size: 16px;
+  
+    
+}
+
+.aeroplane-type {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    gap:5px
+   
+}
+.aeroplane-type-type{
+    font-weight: 700;
+}
+
+.aeroplane-seat {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+}
+.aeroplane-seat-seat{
+    font-weight: 700;
+}
+
+.aeroplane-destination {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+}
+.aeroplane-destination-dest{
+    font-weight: 700;
+}
+
+.aeroplane-time {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+}
+.aeroplane-time-time{
+    font-weight: 700;
+}
