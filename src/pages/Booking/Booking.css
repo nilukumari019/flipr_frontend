@@ -1,40 +1,54 @@
-/* HotelRoomDetails.css */
-
-/* Style for the container div */
-.container {
-    margin: 20px;
+/* Hotel container */
+.hotel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    border: 2px solid #ccc;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    margin: 20px auto;
+    width: 90vw;
+    border-radius: 10px;
+    background-color: #00000018;
+   
+    
 }
-
-/* Style for the table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-/* Style for table headings */
-th {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
-
-/* Style for table cells */
-td {
-    padding: 10px;
+.booked{
     text-align: center;
+    padding-top: 10px;
 }
 
-/* Alternate row background color for better readability */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Hotel image */
+.hotel-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    
+    border-radius: 10px;
+    margin:10px auto;
 }
 
-/* Style for the h2 heading */
-h2 {
-    margin-bottom: 20px;
-    color: #333;
+/* Hotel info */
+.hotel-info {
+    flex: 1;
+}
+
+.hotel-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hotel-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: flex;
+    
+}
+
+
+.hotel-address {
+    font-size: 14px;
+    color: #666;
 }
