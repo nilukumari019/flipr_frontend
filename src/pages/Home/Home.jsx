@@ -15,9 +15,7 @@ const Home = () => {
                 </div>
                 <button type="button">Search Destination</button>
             </div>
-            <div className="right">
-                <img src={svg} />
-            </div>
+            <div className="right">{/* <img src={svg} /> */}</div>
         </div>
     );
 };

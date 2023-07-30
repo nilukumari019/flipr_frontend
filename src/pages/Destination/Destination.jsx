@@ -1,11 +1,17 @@
-import React, { useState } from "react";
-import "./Destination.scss";  
+import React, { useEffect, useState } from "react";
+import "./Destination.scss";
+import Country from "../../components/Country";
 
 const LocationSearch = () => {
     const [form, setForm] = useState({
         from: "Select where to start",
         to: "Select where to go",
     });
+
+    const [country, setCountry] = useState([]);
+    useEffect(() => {
+        Country(setCountry);
+    }, []);
 
     return (
         <div className="destination">
@@ -20,8 +26,9 @@ const LocationSearch = () => {
                     }
                 >
                     <option>Select where to start</option>
-                    <option value="Chandigarh">Chandigarh</option>
-                    <option value="Jodhpur">Jodhpur</option>
+                    {country.map((item) => (
+                        <option value={item}>{item}</option>
+                    ))}
                 </select>
             </div>
             <div className="row">
@@ -35,8 +42,9 @@ const LocationSearch = () => {
                     }
                 >
                     <option>Select where to go</option>
-                    <option value="Chandigarh">Chandigarh</option>
-                    <option value="Jodhpur">Jodhpur</option>
+                    {country.map((item) => (
+                        <option value={item}>{item}</option>
+                    ))}
                 </select>
             </div>
             <button>Search</button>

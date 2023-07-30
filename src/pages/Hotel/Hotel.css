@@ -1,14 +1,11 @@
-/* Example CSS to reduce the width of the search bar */
 .Hotel {
-    /* padding-top: 30vh; */
-    /* margin-top: 30vh; */
     max-width: 90vw;
     box-shadow: 0px 0px 4px #aaa;
-    margin:10vh auto;
-    background: linear-gradient(#fff, #ddd);
+    margin: 10vh auto;
+    background: #ffffff55;
     padding: 30px;
 }
-label{
+label {
     padding-bottom: 10px;
 }
 select {
@@ -17,33 +14,40 @@ select {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  button {
+}
+
+button {
     padding: 8px 16px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-
-.card-wrapper{
-  width: 90vw;
-  margin: auto;
-  display: flex;
-  /* justify-content: space-between; */
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
-.Extra{
-  font-family: '';
-  font-weight: lighter;
-  color: #565656;
+button:hover {
+    background-color: #0056b3;
+}
+
+.card-wrapper {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Extra {
+    font-family: "";
+    font-weight: lighter;
+    color: #565656;
+}
+
+.nope {
+    color: white;
+    text-shadow: 0 0 8px black;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
 }

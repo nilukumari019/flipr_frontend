@@ -1,32 +1,3 @@
-
-// import React from "react";
-// import "./TravelCard.css"; // Import the CSS file for styling
-
-// const TravelCard = () => {
-//     return (
-//         <div className="aeroplane-container">
-           
-//             <div className="aeroplane-info">
-//                 <h2 className="aeroplane-name">Flight XYZ123</h2>
-//                 <p className="aeroplane-description">
-//                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-//                     Nullam ultricies, mi eu cursus lacinia, quam quam laoreet
-//                     quam, eu eleifend tortor magna id est. Donec hendrerit magna
-//                     non libero egestas, nec volutpat enim fermentum.
-//                 </p>
-//                 <p className="aeroplane-route">From: City A to City B</p>
-//                 <p className="aeroplane-date">Departure: 30th July 2023</p>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default TravelCard;
-
-
-
-
-
 import React from "react";
 import "./TravelCard.css"; // Import the CSS file for styling
 

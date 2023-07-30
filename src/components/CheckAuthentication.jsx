@@ -24,7 +24,6 @@ const CheckAuthentication = ({ children, required = false, r = false }) => {
                         },
                     }
                 );
-                console.log(response);
                 const response = await res.json();
                 if (response.ok) {
                     if (response.success) {
@@ -37,7 +36,10 @@ const CheckAuthentication = ({ children, required = false, r = false }) => {
                     redirect("/login");
                 }
             } catch (err) {
-                redirect("/login");
+                console.log(err);
+                if (err.code === 404) {
+                    redirect("/login");
+                }
             }
         };
         if (!state) {

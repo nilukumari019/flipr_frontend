@@ -5,16 +5,14 @@
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
-    border: 2px solid #ccc;
+    /* border: 2px solid #ccc; */
     padding: 20px;
     margin: 20px auto;
     width: 90vw;
     border-radius: 10px;
-    background-color: #00000018;
-   
-    
+    background: #ffffff88;
 }
-.booked{
+.booked {
     text-align: center;
     padding-top: 10px;
 }
@@ -24,9 +22,9 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
-    
+
     border-radius: 10px;
-    margin:10px auto;
+    margin: 10px auto;
 }
 
 /* Hotel info */
@@ -44,9 +42,7 @@
     line-height: 1.5;
     margin-bottom: 10px;
     display: flex;
-    
 }
-
 
 .hotel-address {
     font-size: 14px;

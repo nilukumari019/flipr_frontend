@@ -73,4 +73,19 @@ export const logout = (dispatch) => {
     dispatch(authActions.logout());
 };
 
-
+export const hotel = async (area, set) => {
+    try {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND}/hotel`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ area }),
+        });
+        const response = await res.json();
+        console.log(response);
+        set(response);
+    } catch (err) {
+        console.log(err);
+    }
+};
