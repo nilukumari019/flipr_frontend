@@ -14,31 +14,36 @@ const CheckAuthentication = ({ children, required = false, r = false }) => {
                 .split("; ")
                 .find((row) => row.startsWith("jwt="))
                 ?.split("=")[1];
-
-            const res = await fetch(
-                `${import.meta.env.VITE_BACKEND}/isloggedin`,
-                {
-                    method: "POST",
-                    headers: {
-                        Authorization: `bearer ${cookie}`,
-                    },
+            try {
+                const res = await fetch(
+                    `${import.meta.env.VITE_BACKEND}/isloggedin`,
+                    {
+                        method: "POST",
+                        headers: {
+                            Authorization: `bearer ${cookie}`,
+                        },
+                    }
+                );
+                console.log(response);
+                const response = await res.json();
+                if (response.ok) {
+                    if (response.success) {
+                        dispatch(authActions.login(response.user));
+                        if (r) {
+                            redirect("/");
+                        }
+                    }
+                } else if (required) {
+                    redirect("/login");
                 }
-            );
-
-            const response = await res.json();
-            if (response.success) {
-                dispatch(authActions.login(response.user));
-                if (r) {
-                    redirect("/");
-                }
-            } else if (required) {
+            } catch (err) {
                 redirect("/login");
             }
         };
         if (!state) {
             f();
         }
-    });
+    }, []);
     return <>{children}</>;
 };
 
