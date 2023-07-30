@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import "./login.scss";
 import { login } from "../../components/http_request";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const [error, setError] = useState({ email: "", password: "" });
     const [formData, setFormData] = useState({
         email: "",
         password: "",
     });
     const [show, setShow] = useState(false);
-
+    const dispatch = useDispatch();
+    const redirect = useNavigate();
     return (
         <div className="login-container">
             <h1>Login</h1>
@@ -25,6 +29,9 @@ const Login = () => {
                     }
                     required
                 />
+                <label className="error" style={{ color: "red" }}>
+                    {error.email}
+                </label>
 
                 <label htmlFor="password">Password:</label>
                 <input
@@ -37,6 +44,9 @@ const Login = () => {
                     }
                     required
                 />
+                <label className="error" style={{ color: "red" }}>
+                    {error.password}
+                </label>
 
                 <div className="check">
                     <input
@@ -48,7 +58,16 @@ const Login = () => {
                 </div>
 
                 <div className="box">
-                    <button type="submit" onClick={login}>
+                    <button
+                        type="submit"
+                        onClick={login.bind(
+                            null,
+                            setError,
+                            formData,
+                            dispatch,
+                            redirect
+                        )}
+                    >
                         Login
                     </button>
                     <button

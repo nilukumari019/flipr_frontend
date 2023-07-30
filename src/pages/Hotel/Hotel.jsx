@@ -31,15 +31,17 @@ const Hotel = ({ onSearch }) => {
                 </select>
                 <button onClick={handleSearch}>Search</button>
             </div>
-            <div className="card-wrapper">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+            <div>
+                <div className="card-wrapper">
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
             </div>
         </>
     );

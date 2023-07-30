@@ -3,17 +3,18 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    margin: auto;
     font-weight: bold;
 }
-.Extra{
+.Extra {
     margin-top: 2vh;
 }
-.Info{
+.Info {
     margin-top: 2vh;
 }
-button{
+button {
     margin-top: 1vh;
 }
-.Card img{
+.Card img {
     border-radius: 10px;
 }

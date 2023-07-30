@@ -12,11 +12,15 @@ const Signup = () => {
         password: "",
         confirmPassword: "",
     });
-
     const [show, setShow] = useState(false);
     const dispatch = useDispatch();
     const redirect = useNavigate();
-
+    const [error, setError] = useState({
+        name: "",
+        phoneNumber: "",
+        email: "",
+        password: "",
+    });
     return (
         <div className="signup-container">
             <h1>Sign Up</h1>
@@ -32,6 +36,9 @@ const Signup = () => {
                     }
                     required
                 />
+                <label className="error" style={{ color: "red" }}>
+                    {error.name}
+                </label>
                 <label htmlFor="phoneNumber">Phone Number:</label>
                 <input
                     type="number"
@@ -45,6 +52,9 @@ const Signup = () => {
                     }
                     required
                 />
+                <label className="error" style={{ color: "red" }}>
+                    {error.phoneNumber}
+                </label>
 
                 <label htmlFor="email">Email:</label>
                 <input
@@ -57,6 +67,9 @@ const Signup = () => {
                     }
                     required
                 />
+                <label className="error" style={{ color: "red" }}>
+                    {error.email}
+                </label>
 
                 <label htmlFor="password">Password:</label>
                 <input
@@ -81,6 +94,9 @@ const Signup = () => {
                     }
                     required
                 />
+                <label className="error" style={{ color: "red" }}>
+                    {error.password}
+                </label>
                 <div className="check">
                     <input
                         type="checkbox"
@@ -92,7 +108,13 @@ const Signup = () => {
                 </div>
 
                 <button
-                    onClick={signup.bind(null, formData, redirect, dispatch)}
+                    onClick={signup.bind(
+                        null,
+                        formData,
+                        redirect,
+                        dispatch,
+                        setError
+                    )}
                     type="submit"
                 >
                     Sign Up
