@@ -22,11 +22,13 @@
     flex: 1;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
 .aeroplane-name {
     font-size: 16px;
+    margin-bottom: 5px;
   
     
 }
