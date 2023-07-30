@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { Booking, Destination, Home, Hotel, Login, Signup } from "./pages";
 import CheckAuthentication from "./components/CheckAuthentication";
+import HotelDetails from "./pages/Booking/HotelDetails/HotelDetails";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
                     </CheckAuthentication>
                 ),
             },
+            {path: '/hotel/detail', element: <HotelDetails/>},
             {
                 path: "/signup",
                 element: (
