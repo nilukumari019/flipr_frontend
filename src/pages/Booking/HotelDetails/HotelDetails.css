@@ -1,12 +1,18 @@
 .HotelDetails{
+    background-color: rgba(215, 205, 113, 0.259);
+    width: 95vw;
+    padding: 30px 10px;
+    margin: 20px auto;
+    height: fit-content;
 text-align: left;
 display: flex;
+flex-wrap: wrap;
 }
 
 .HotelDetails img{
-    margin-left: 30px;
+    margin-left: 20px;
     border-radius: 10px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     height: 250px;
 }
 
@@ -67,4 +73,35 @@ display: flex;
     border-radius: 5px;
     border: 1px solid gray;
     margin-left: 1px;
+}
+
+.Country{
+    padding: 5px 0;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: black;
+
+}
+
+.type{
+    color: black;
+    font-size: 15px;
+    margin-left: 16px;
+}
+
+.BookNow{
+    padding: 8px 16px;
+    height: 40px;
+    background-color: #ff4d00;
+    font-size: ;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: white;
+    font-family: 'playfair';
+    font-weight: 500;
+    font-size: 20px;
+    
+
 }
