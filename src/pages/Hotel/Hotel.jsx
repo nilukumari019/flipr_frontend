@@ -34,10 +34,12 @@ const Hotel = () => {
                     {hotels.map((item, i) => (
                         <Card
                             key={i}
+                            price={item.price}
                             name={item.name}
                             country={item.country}
                             id={item._id}
                             image={item.image}
+                            Favorite={item.favorite}
                         />
                     ))}
                 </div>

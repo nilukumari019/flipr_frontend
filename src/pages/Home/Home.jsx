@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import svg from "../../assets/girl.svg";
 
 const Home = () => {
     return (
@@ -15,7 +14,6 @@ const Home = () => {
                 </div>
                 <button type="button">Search Destination</button>
             </div>
-            <div className="right">{/* <img src={svg} /> */}</div>
         </div>
     );
 };

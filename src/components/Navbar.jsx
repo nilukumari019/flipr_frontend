@@ -13,7 +13,6 @@ const Navbar = () => {
                 </div>
                 <div className="menu">
                     <Link to="/">Home</Link>
-                    <Link to="/destination">Destinations</Link>
                     <Link to="/hotel">Hotels</Link>
                     {isAuthenticated ? (
                         <>

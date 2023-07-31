@@ -25,7 +25,8 @@ const CheckAuthentication = ({ children, required = false, r = false }) => {
                     }
                 );
                 const response = await res.json();
-                if (response.ok) {
+                console.log(res.ok);
+                if (res.ok) {
                     if (response.success) {
                         dispatch(authActions.login(response.user));
                         if (r) {

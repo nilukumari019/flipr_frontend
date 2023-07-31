@@ -4,6 +4,7 @@
     border-radius: 10px;
     text-align: center;
     margin: auto;
+    position: relative;
     font-weight: bold;
 }
 .Extra {
@@ -17,4 +18,21 @@ button {
 }
 .Card img {
     border-radius: 10px;
+}
+
+.favorite {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 5px;
+    background-color: #ffffffbb;
+    border-radius: 5px;
+}
+.favorite:hover {
+    cursor: pointer;
+}
+
+.favorite:hover svg {
+    color: red;
 }
